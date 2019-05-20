@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>	First flask app </title>
+</head>
+<body style = "text-align: center; background-color:rgb(105,105,105)">
+<h2 style = "text-align: center;">Login Form</h2>
+<p> {{error}} </p>
+<fieldset style="width:500px, float:left; background-color:rgb(192,192,192);">
+    <legend>Login Form</legend>
+<form action="/login" method="POST">
+	<p>Email: <input type="text" name="email"></p>
+	<p>Password: <input type="password" name="password"></p>
+	<p><input type="submit"></p>
+	<a href="/registerationForm">Register here</a>
+</form>
+</fieldset>
+</body>
+</html>

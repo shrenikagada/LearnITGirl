@@ -19,17 +19,17 @@ conn = sqlite3.connect('gratify.db')
 # 		phone TEXT
 # 		)''')
 # conn.commit()
-conn.execute('''CREATE TABLE products
-		(productId INTEGER PRIMARY KEY,
-		name TEXT,
-		price REAL,
-		description TEXT,
-		image TEXT,
-		stock INTEGER,
-		categoryId INTEGER,
-		FOREIGN KEY(categoryId) REFERENCES categories(categoryId)
-		)''')
-conn.commit()
+# conn.execute('''CREATE TABLE products
+# 		(productId INTEGER PRIMARY KEY,
+# 		name TEXT,
+# 		price REAL,
+# 		description TEXT,
+# 		image TEXT,
+# 		stock INTEGER,
+# 		categoryId INTEGER,
+# 		FOREIGN KEY(categoryId) REFERENCES categories(categoryId)
+# 		)''')
+# conn.commit()
 # conn.execute('''CREATE TABLE kart
 # 		(userId INTEGER,
 # 		productId INTEGER,
@@ -49,4 +49,6 @@ conn.commit()
 #         validity TEXT,
 #         FOREIGN KEY(userId) REFERENCES users(userId))''')
 # conn.commit()
+conn.execute('''INSERT INTO categories values(1,'Women'),(2,'Men'),(3,'Children')''')
+conn.commit()
 conn.close()
