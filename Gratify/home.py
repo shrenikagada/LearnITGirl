@@ -117,6 +117,7 @@ def displayCategory():
             cur = conn.cursor()
             cur.execute("SELECT products.productId, products.name, products.price, products.image, categories.name FROM products, categories WHERE products.categoryId = categories.categoryId AND categories.categoryId = ?", (categoryId, ))
             data = cur.fetchall()
+            print(data)
         conn.close()
         categoryName = data[0][4]
         data = parse(data)
